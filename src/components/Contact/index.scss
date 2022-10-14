@@ -1,0 +1,203 @@
+.contact-page{
+    .text-zone{
+        position: absolute;
+        left: 170px;
+        width: 50%;
+    
+    h1{
+        color: white;
+        font-size: 67px;
+        // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'coolventica';
+        margin-top: 65px;
+        // margin-bottom: 30px;
+
+        &::before{
+            content: '<h1>';
+            color: beige;
+            font-size: 20px;
+            font-family: 'La Belle Aurore';
+            opacity: 0.6;
+            position: absolute;
+            top: 52px;
+            left: -15px;
+            margin-left: 12px;
+            margin-bottom: 3px;
+            font-weight: 100;
+        }
+        &::after{
+            content: '</h1>';
+            color: beige;
+            font-size: 20px;
+            font-family: 'La Belle Aurore';
+            opacity: 0.4;
+            position: absolute;
+            top: 99px;
+            left: 332px;
+        }
+        
+       
+    }
+
+    p{
+        color: #fff;
+        margin-top: -30px;
+        width: 500px;
+        
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-family: sans-serif;
+
+        &::before{
+            content: '<p>';
+                color: beige;
+                font-size: 20px;
+                font-family: 'La Belle Aurore';
+                opacity: 0.4;
+                position: absolute;
+                top: 128px;
+                left: -12px;
+        }
+        &::after{
+            content: '</p>';
+            color: beige;
+            font-size: 20px;
+            font-family: 'La Belle Aurore';
+            opacity: 0.4;
+            position: absolute;
+            top: 186px;
+            left: 329px;
+        }
+        
+    }
+}}
+
+.contact-form {
+    width: 50%;
+    margin-top: 20px;
+  
+    ul {
+      padding: 0;
+      margin: 0;
+  
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 10px;
+        opacity: 0;
+        overflow: hidden;
+        display: block;
+        clear: both;
+        position: relative;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+      }
+  
+      li.half {
+        width: 49%;
+        margin-left: 2%;
+        float: left;
+        clear: none;
+  
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      min-height: 150px;
+    }
+  
+    .flat-button {
+      color: #ffd700;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 8px 10px;
+      border: 1px solid #ffd700;
+      float: left;
+      border-radius: 4px;
+      background: 0 0;
+      text-transform: uppercase;
+      float: right;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+  
+  .map-wrap {
+    background: rgba(8, 253, 216, 0.1);
+    float: right;
+    width: 53%;
+    height: 115%;
+    margin-top: -3%;
+  }
+  
+  .leaflet-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: backInRight 1s 1.2s;
+    animation-fill-mode: forwards;
+  }
+  
+  .info-map {
+    position: absolute;
+    background: #000;
+    top: 50px;
+    right: 30%;
+    z-index: 999999;
+    width: 267px;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Helvetica';
+    font-size: 17px;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s;
+    animation-fill-mode: forwards;
+  
+    span {
+      font-size: 16px;
+  
+      span {
+        color: #ffd700;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .map-wrap {
+      float: none;
+      margin: 0;
+      width: 100%;
+      height: 400px;
+    }
+    
+    .info-map {
+      display: none;
+    }
+  }
